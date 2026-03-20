@@ -5,7 +5,7 @@ This is inspired by Classroom Screen : https://classroomscreen.com/
 # Catssroom | Use/Run
 For running the app you have 2 methods :
 - Go to the [release page](https://github.com/Stenium112/Catssroom/releases) and download the latest version of Catssroom
-- Download the .zip/clone the repositerie, extract it and run the godot console .exe file **
+- [Download the .zip](https://github.com/Stenium112/Catssroom/archive/refs/heads/main.zip)/clone the repositerie, extract it and run the godot console .exe file **
 
 ** This will show the live log of the app on the console but the files is more larger and can have some experimental changes
 
