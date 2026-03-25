@@ -2,23 +2,22 @@
 
 [ext_resource type="Script" uid="uid://c3gm8nyp43lm2" path="res://widget/barre.gd" id="1_8d1ea"]
 [ext_resource type="Theme" uid="uid://w8bybooxrfq2" path="res://assets/themes/style.tres" id="2_urdoc"]
+[ext_resource type="Texture2D" uid="uid://dvoxiinydqjtp" path="res://assets/images/Paramètres.svg" id="3_erd3k"]
 
 [node name="barre" type="Window" unique_id=1990801582]
 oversampling_override = 1.0
-position = Vector2i(0, 36)
+title = "Bar"
+size = Vector2i(690, 138)
+unresizable = true
+borderless = true
 script = ExtResource("1_8d1ea")
 
 [node name="Panel" type="Panel" parent="." unique_id=1055503955]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -146.0
-offset_top = -41.0
-offset_right = 146.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 mouse_filter = 1
 theme = ExtResource("2_urdoc")
 
@@ -29,9 +28,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -119.5
+offset_left = -141.0
 offset_top = -15.5
-offset_right = 119.5
+offset_right = 141.0
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -61,18 +60,13 @@ mouse_filter = 1
 theme = ExtResource("2_urdoc")
 text = "000"
 
-[node name="Button5" type="Button" parent="Panel/HBoxContainer" unique_id=2091889466]
+[node name="Parameters" type="Button" parent="Panel/HBoxContainer" unique_id=2091889466]
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("2_urdoc")
-text = "000"
-
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=2088805202]
-color = Color(1, 1, 1, 0)
-invert_enabled = true
-invert_border = 750.0
-polygon = PackedVector2Array(7, 0, 0, 7, 0, 34, 8, 41, 284, 41, 292, 33, 292, 7, 285, 0)
-uv = PackedVector2Array(7, 0, 0, 7, 0, 34, 8, 41, 284, 41, 292, 33, 292, 7, 285, 0)
+icon = ExtResource("3_erd3k")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="Panel/HBoxContainer/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Hide" to="." method="_on_hide_pressed"]

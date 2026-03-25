@@ -2,6 +2,8 @@ extends Window
 
 var mouse_hover : bool = false
 
+@onready var panel: Panel = $Panel
+
 func _on_close_pressed() -> void:
 	Global.quit(0, "Close button pressed")
 
