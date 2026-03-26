@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" uid="uid://c3gm8nyp43lm2" path="res://widget/barre.gd" id="1_8d1ea"]
 [ext_resource type="Theme" uid="uid://w8bybooxrfq2" path="res://assets/themes/style.tres" id="2_urdoc"]
+[ext_resource type="Texture2D" uid="uid://5vhwiqr8k72t" path="res://assets/images/Fermer.svg" id="3_at231"]
 [ext_resource type="Texture2D" uid="uid://dvoxiinydqjtp" path="res://assets/images/Paramètres.svg" id="3_erd3k"]
+[ext_resource type="Texture2D" uid="uid://butffw5mo5u28" path="res://assets/images/Minimizer.svg" id="4_c65k0"]
+[ext_resource type="Texture2D" uid="uid://butki4ma4w55t" path="res://assets/images/Chrono.svg" id="5_kad4w"]
 
 [node name="barre" type="Window" unique_id=1990801582]
 oversampling_override = 1.0
@@ -40,25 +43,24 @@ theme = ExtResource("2_urdoc")
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("2_urdoc")
-text = "Close"
+icon = ExtResource("3_at231")
 
 [node name="Hide" type="Button" parent="Panel/HBoxContainer" unique_id=1734323352]
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("2_urdoc")
-text = "Minimize"
+icon = ExtResource("4_c65k0")
 
 [node name="Chrono" type="Button" parent="Panel/HBoxContainer" unique_id=1169578061]
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("2_urdoc")
-text = "Chrono"
+icon = ExtResource("5_kad4w")
 
 [node name="Button4" type="Button" parent="Panel/HBoxContainer" unique_id=2102857555]
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("2_urdoc")
-text = "000"
 
 [node name="Parameters" type="Button" parent="Panel/HBoxContainer" unique_id=2091889466]
 layout_mode = 2
