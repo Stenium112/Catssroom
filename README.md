@@ -8,7 +8,7 @@ This is inspired by [Classroom Screen](https://classroomscreen.com/)
 ### Use/Run
 For use the app you have 2 methods :
 - Go to the [release page](https://github.com/Stenium112/Catssroom/releases) and download the latest version of Catssroom
-- [Download the .zip](https://github.com/Stenium112/Catssroom/archive/refs/heads/main.zip)/clone the repository, extract it and run the godot console .exe file **
+- [Download the .zip](https://github.com/Stenium112/Catssroom/archive/refs/heads/main.zip)/clone the repository, extract it, [download Godot](https://godotengine.org/download/), put the executable files of godot in the extracted zip files and finally run one of them. **
 
 ** This will show the live log of the app on the console but the files are more larger and can have some experimental changes
 
@@ -32,7 +32,7 @@ Ce project est inspiré par [Classroom Screen](https://classroomscreen.com/)
 ### Utiliser/Démarrer
 Pour utiliser l'application vous avez 2 méthodes :
 - Aller sur la [page de mise à jour (release)](https://github.com/Stenium112/Catssroom/releases) et télécharger la dernière version de Catssroom
-- [Télécharger le .zip](https://github.com/Stenium112/Catssroom/archive/refs/heads/main.zip)/cloner le repository, extrais le .zip et exécuter  godot le fichier .exe **
+- [Télécharger le .zip](https://github.com/Stenium112/Catssroom/archive/refs/heads/main.zip)/cloner le repository, extrais le .zip  [Téléchargez Godot](https://godotengine.org/download/), mettez les fichier executables de Godot dans le dossier extrait du projet et executez un des fichiers Godot **
 
 ** Cela vous montrera les logs en direct de l'application mais les fichiers sont plus gros et peuvent avoir des changement experimental
 
