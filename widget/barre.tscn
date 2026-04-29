@@ -2,17 +2,15 @@
 
 [ext_resource type="Script" uid="uid://c3gm8nyp43lm2" path="res://widget/barre.gd" id="1_8d1ea"]
 [ext_resource type="Theme" uid="uid://w8bybooxrfq2" path="res://assets/themes/style.tres" id="2_urdoc"]
-[ext_resource type="Texture2D" uid="uid://5vhwiqr8k72t" path="res://assets/images/Fermer.svg" id="3_at231"]
-[ext_resource type="Texture2D" uid="uid://dvoxiinydqjtp" path="res://assets/images/Paramètres.svg" id="3_erd3k"]
-[ext_resource type="Texture2D" uid="uid://butffw5mo5u28" path="res://assets/images/Minimizer.svg" id="4_c65k0"]
-[ext_resource type="Texture2D" uid="uid://butki4ma4w55t" path="res://assets/images/Chrono.svg" id="5_kad4w"]
 
 [node name="barre" type="Window" unique_id=1990801582]
 transparent_bg = true
 oversampling_override = 1.0
 title = "Bar"
-size = Vector2i(345, 69)
+position = Vector2i(0, 36)
+size = Vector2i(230, 31)
 unresizable = true
+borderless = true
 always_on_top = true
 transparent = true
 script = ExtResource("1_8d1ea")
@@ -27,41 +25,36 @@ mouse_filter = 1
 theme = ExtResource("2_urdoc")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=973876418]
-layout_mode = 0
-offset_left = 33.0
-offset_right = 601.0
-offset_bottom = 136.0
-scale = Vector2(0.5, 0.5)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -45.4171
 theme = ExtResource("2_urdoc")
 
 [node name="Close" type="Button" parent="Panel/HBoxContainer" unique_id=1835371790]
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("2_urdoc")
-icon = ExtResource("3_at231")
+text = "Close"
 
 [node name="Hide" type="Button" parent="Panel/HBoxContainer" unique_id=1734323352]
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("2_urdoc")
-icon = ExtResource("4_c65k0")
+text = "Hide"
 
 [node name="Chrono" type="Button" parent="Panel/HBoxContainer" unique_id=1169578061]
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("2_urdoc")
-icon = ExtResource("5_kad4w")
-
-[node name="Button4" type="Button" parent="Panel/HBoxContainer" unique_id=2102857555]
-layout_mode = 2
-mouse_filter = 1
-theme = ExtResource("2_urdoc")
+text = "Chrono"
 
 [node name="Parameters" type="Button" parent="Panel/HBoxContainer" unique_id=2091889466]
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("2_urdoc")
-icon = ExtResource("3_erd3k")
+text = "Param"
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
