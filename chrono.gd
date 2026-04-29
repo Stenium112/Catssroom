@@ -1,6 +1,8 @@
 extends Panel
 
 @onready var label: Label = $Label
+@onready var _1s: Timer = $"1s"
+@onready var _1_ms: Timer = $"1ms"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,11 +11,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	arrange_string(630, 0)
+	arrange_string(0, 0)
 
 func arrange_string(time: float, ms: float) -> void:
 	var dict: Dictionary = convert_time(time)
-	label.text = str(dict["Hours"]) + ":" + str(dict["Minutes"]) + ":" + str(dict["Seconds"])
+	label.text = str(dict["Hours"]) + ":" + str(dict["Minutes"]) + ":" + str(dict["Seconds"] + "." + str(ms))
 
 func convert_time(seconds: int):
 	var hours = int(seconds / 3600)

@@ -67,3 +67,4 @@ text = "Reset"
 [node name="1s" type="Timer" parent="Panel" unique_id=1418920020]
 
 [node name="1ms" type="Timer" parent="Panel" unique_id=50267142]
+wait_time = 0.009999999999999998
