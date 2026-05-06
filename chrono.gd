@@ -21,15 +21,18 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	arrange_string(time)
 	
+	if chrono.size != Vector2i(size.x * scale.x, size.y * scale.y): chrono.size = Vector2i(size.x * scale.x, size.y * scale.y)
+	
+	if scale < Vector2(0.25, 0.25): scale = Vector2(0.25, 0.25)
 	if Input.is_action_pressed("left click"):
 		chrono.start_drag()
 	
-	if Input.is_action_pressed("mouse wheel down"):
-		chrono.size -= Vector2i(1,1)
-	if Input.is_action_pressed("mouse wheel up"):
-		chrono.size += Vector2i(1,1)
-	if Input.is_action_just_pressed("mouse wheel"):
-		chrono.size = Vector2i(1,1)
+	if Input.is_action_pressed("down"):
+		if scale > Vector2(0.25, 0.25): scale -= Vector2(0.01, 0.01)
+	if Input.is_action_pressed("up"):
+		scale += Vector2(0.01, 0.01)
+	if Input.is_action_just_pressed("right"):
+		scale = Vector2(0.25, 0.25)
 
 
 func arrange_string(_time: float) -> void:
