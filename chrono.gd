@@ -1,9 +1,15 @@
 extends Panel
 
+@onready var panel: Panel = $"."
 @onready var label: Label = $Label
 @onready var _1s: Timer = $"1s"
+@onready var start: Button = $Start
+@onready var pause: Button = $Buttons/Pause
+@onready var buttons: HBoxContainer = $Buttons
+@onready var chrono: Window = $".."
 
-var time : float = 0
+var time: float = 0
+var mouse_offset: Vector2i
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,12 +19,20 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	arrange_string(time)
+	if Input.is_action_just_pressed("left click"):
+		mouse_offset = panel.get_local_mouse_position()
+	if Input.is_action_pressed("left click"):
+		chrono.position = (chrono.position + Vector2i(panel.get_global_mouse_position()) - mouse_offset)
 
 
 func arrange_string(_time: float) -> void:
 	var dict: Dictionary = convert_time(_time)
-	var array: Array = [str(dict["Hours"]), str(dict["Minutes"]), str(dict["Seconds"])]
-	label.text = ":".join(array) + str(_time).right(2)
+	var array: Array = [str(dict["Hours"]), str(dict["Minutes"]).pad_zeros(2), str(dict["Seconds"]).pad_zeros(2)]
+	if dict["Hours"] == 0: array.remove_at(0)
+	
+	
+	var ms: String = str(_time).pad_decimals(1).right(1)
+	label.text = ":".join(array) + "." + ms
 	
 
 
@@ -38,5 +52,19 @@ func _on_s_timeout() -> void:
 
 
 func _on_start_pressed() -> void:
-	_1s.start()
-	print("1")
+	if _1s.is_stopped(): _1s.start()
+	elif _1s.paused: _1s.paused = false
+	start.visible = false
+	buttons.visible = true
+
+
+func _on_pause_pressed() -> void:
+	_1s.paused = !_1s.paused
+
+
+func _on_reset_pressed() -> void:
+	if _1s.paused: _1s.paused = false
+	_1s.stop()
+	time = 0
+	start.visible = true
+	buttons.visible = false
