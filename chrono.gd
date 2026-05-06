@@ -23,6 +23,14 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_pressed("left click"):
 		chrono.start_drag()
+	
+	if Input.is_action_pressed("mouse wheel down"):
+		chrono.size -= Vector2i(1,1)
+	if Input.is_action_pressed("mouse wheel up"):
+		chrono.size += Vector2i(1,1)
+	if Input.is_action_just_pressed("mouse wheel"):
+		chrono.size = Vector2i(1,1)
+
 
 func arrange_string(_time: float) -> void:
 	var dict: Dictionary = convert_time(_time)
