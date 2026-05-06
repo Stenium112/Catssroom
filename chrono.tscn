@@ -6,7 +6,7 @@
 [node name="Chrono" type="Window" unique_id=1485990453]
 oversampling_override = 1.0
 title = "Chrono"
-position = Vector2i(0, 36)
+initial_position = 1
 size = Vector2i(125, 125)
 borderless = true
 always_on_top = true
