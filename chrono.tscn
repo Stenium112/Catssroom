@@ -4,12 +4,14 @@
 [ext_resource type="Script" uid="uid://0onsv2q1w55n" path="res://chrono.gd" id="2_6uio6"]
 
 [node name="Chrono" type="Window" unique_id=1485990453]
+transparent_bg = true
 oversampling_override = 1.0
 title = "Chrono"
 initial_position = 1
 size = Vector2i(125, 125)
 borderless = true
 always_on_top = true
+transparent = true
 content_scale_mode = 1
 content_scale_aspect = 1
 
