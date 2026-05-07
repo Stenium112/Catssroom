@@ -5,6 +5,14 @@
 A application for professors in classroom, made with [Godot](https://godotengine.org/en/), by a French guy.
 This is inspired by [Classroom Screen](https://classroomscreen.com/)
 
+### Screenshot
+
+![Chrono Screenshot 1 png](chrono (1).png "Chrono Screenshot 1")
+
+![Chrono Screenshot 2 png](chrono (2).png "Chrono Screenshot 2")
+
+![Bar Screenshot png](bar.png "Bar Screenshot")
+
 ### Use/Run
 For use the app you have 2 methods :
 - Go to the [release page](https://github.com/Stenium112/Catssroom/releases) and download the latest version of Catssroom
@@ -31,6 +39,14 @@ So you can modify and publy this project, but you must give appropriate credits 
 ### À propos
 Une application pour les professeurs en classe, créé avec [Godot](https://godotengine.org/fr/).
 Ce project est inspiré par [Classroom Screen](https://classroomscreen.com/)
+
+### Capture d'écran
+
+![Chrono Capture d'écran 1 png](chrono (1).png "Chrono Capture d'écran 1")
+
+![Chrono Capture d'écran 2 png](chrono (2).png "Chrono Capture d'écran 2")
+
+![Bar Capture d'écran png](bar.png "Barre Capture d'écran")
 
 ### Utiliser/Démarrer
 Pour utiliser l'application vous avez 2 méthodes :
