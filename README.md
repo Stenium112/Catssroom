@@ -20,6 +20,9 @@ You can [participate on the project](https://github.com/Stenium112/Catssroom/pul
 
 ### License
 This application is licesend with the [Creative Commons BY (must have credit) NC (cannot be comercialise) SA (has to be on the same license)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+![Creative Commons png](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png "Creative Commons BY-NC-SA")
+
 So you can modify and publy this project, but you must give appropriate credits like "Originnaly created by Stenium and the community of Catssroom", you cannot commercialise this project and has to be on the same license.
 
 # Français
@@ -45,4 +48,7 @@ Vous pouvez [participer au projet](https://github.com/Stenium112/Catssroom/pulls
 
 ### licence
 Ce projet est sous la licence [Creative Commons BY (doit avoir des crédits) NC (ne peut être commercialiser) SA (dois avoir la même licence)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+![Creative Commons png](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png "Creative Commons BY-NC-SA")
+
 Donc vous pouvez modifier ce projet et le publier autre par, mais vous devez mettre des crédits approprier comme "Créé originalement par Stenium et la communauté de Catssroom", vous ne pouvez pas commercialisez ce projet et dois avoir la même licence que le projet original.
