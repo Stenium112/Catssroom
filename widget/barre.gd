@@ -8,7 +8,8 @@ func _on_close_pressed() -> void:
 	Global.quit(0, "Close button pressed")
 
 func _on_hide_pressed() -> void:
-	Global.hidden = true
+	Global.hidden()
+	
 
 func _process(delta: float) -> void:
 	if size != Vector2i(panel.size.x * panel.scale.x, panel.size.y * panel.scale.y): size = Vector2i(panel.size.x * panel.scale.x, panel.size.y * panel.scale.y)
@@ -24,3 +25,8 @@ func _process(delta: float) -> void:
 		panel.scale += Vector2(0.01, 0.01)
 	if Input.is_action_just_pressed("right"):
 		panel.scale = Vector2(0.25, 0.25)
+
+
+func _on_chrono_pressed() -> void:
+	var chrono := preload("res://chrono.tscn")
+	add_sibling(chrono.instantiate())

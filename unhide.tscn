@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cmfu6ncm56njs"]
+
+[ext_resource type="Theme" uid="uid://w8bybooxrfq2" path="res://assets/themes/style.tres" id="1_tu218"]
+[ext_resource type="Script" uid="uid://che76jbs3gafc" path="res://unhide.gd" id="2_74j4s"]
+
+[sub_resource type="Theme" id="Theme_bfyk7"]
+
+[node name="Unhide" type="Window" unique_id=1485990453]
+transparent_bg = true
+oversampling_override = 1.0
+title = "Chrono"
+initial_position = 1
+size = Vector2i(66, 32)
+borderless = true
+always_on_top = true
+transparent = true
+content_scale_mode = 1
+content_scale_aspect = 1
+
+[node name="Panel" type="Panel" parent="." unique_id=2064758642]
+offset_right = 263.0
+offset_bottom = 128.0
+scale = Vector2(0.25, 0.25)
+mouse_filter = 1
+theme = ExtResource("1_tu218")
+script = ExtResource("2_74j4s")
+
+[node name="Button" type="Button" parent="Panel" unique_id=1247855026]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.5
+offset_top = -49.0
+offset_right = 116.5
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_bfyk7")
+text = "Unhide"
+
+[connection signal="pressed" from="Panel/Button" to="Panel" method="_on_button_pressed"]
