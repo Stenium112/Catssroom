@@ -1,8 +1,7 @@
-extends Window
+extends Panel
 
-var mouse_offset : Vector2i
-
-@onready var panel: Panel = $Panel
+var mouse_offset: Vector2
+var is_dragging: bool
 
 func _on_close_pressed() -> void:
 	Global.quit(0, "Close button pressed")
@@ -12,20 +11,26 @@ func _on_hide_pressed() -> void:
 	
 
 func _process(delta: float) -> void:
-	if size != Vector2i(panel.size.x * panel.scale.x, panel.size.y * panel.scale.y): size = Vector2i(panel.size.x * panel.scale.x, panel.size.y * panel.scale.y)
 	
-	
-	if panel.scale < Vector2(0.25, 0.25): panel.scale = Vector2(0.25, 0.25)
-	if Input.is_action_pressed("left click"):
-		start_drag()
+	if scale < Vector2(0.25, 0.25): scale = Vector2(0.25, 0.25)
 	
 	if Input.is_action_pressed("down"):
-		if panel.scale > Vector2(0.25, 0.25): panel.scale -= Vector2(0.01, 0.01)
+		if scale > Vector2(0.25, 0.25): scale -= Vector2(0.01, 0.01)
 	if Input.is_action_pressed("up"):
-		panel.scale += Vector2(0.01, 0.01)
+		scale += Vector2(0.01, 0.01)
 	if Input.is_action_just_pressed("right"):
-		panel.scale = Vector2(0.25, 0.25)
+		scale = Vector2(0.25, 0.25)
 
+func _input(event: InputEvent) -> void:
+	if Input.is_action_pressed("left click"):
+		print(is_dragging)
+		if get_local_mouse_position():
+			is_dragging = true
+			mouse_offset = get_local_mouse_position() - position
+			print(mouse_offset)
+		if is_dragging:
+			print(position)
+			position += mouse_offset
 
 func _on_chrono_pressed() -> void:
 	var chrono := preload("res://chrono.tscn")

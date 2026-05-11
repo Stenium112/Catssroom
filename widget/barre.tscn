@@ -3,26 +3,15 @@
 [ext_resource type="Script" uid="uid://c3gm8nyp43lm2" path="res://widget/barre.gd" id="1_8d1ea"]
 [ext_resource type="Theme" uid="uid://w8bybooxrfq2" path="res://assets/themes/style.tres" id="2_urdoc"]
 
-[node name="barre" type="Window" unique_id=1990801582]
-transparent_bg = true
-oversampling_override = 1.0
-title = "Bar"
-initial_position = 1
-borderless = true
-always_on_top = true
-transparent = true
-content_scale_mode = 1
-content_scale_aspect = 1
-script = ExtResource("1_8d1ea")
-
-[node name="Panel" type="Panel" parent="." unique_id=1055503955]
+[node name="barre" type="Panel" unique_id=2063399486]
 offset_right = 850.0
 offset_bottom = 125.0
 scale = Vector2(0.25, 0.25)
 mouse_filter = 1
 theme = ExtResource("2_urdoc")
+script = ExtResource("1_8d1ea")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=973876418]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1733236119]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -38,32 +27,26 @@ grow_vertical = 2
 theme = ExtResource("2_urdoc")
 theme_override_constants/separation = 11
 
-[node name="Close" type="Button" parent="Panel/HBoxContainer" unique_id=1835371790]
+[node name="Close" type="Button" parent="HBoxContainer" unique_id=1405443321]
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("2_urdoc")
 text = "Close"
 
-[node name="Hide" type="Button" parent="Panel/HBoxContainer" unique_id=1734323352]
+[node name="Hide" type="Button" parent="HBoxContainer" unique_id=829537479]
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("2_urdoc")
 text = "Hide"
 
-[node name="Chrono" type="Button" parent="Panel/HBoxContainer" unique_id=1169578061]
+[node name="Chrono" type="Button" parent="HBoxContainer" unique_id=185289077]
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("2_urdoc")
 text = "Chrono"
 
-[node name="Parameters" type="Button" parent="Panel/HBoxContainer" unique_id=2091889466]
+[node name="Parameters" type="Button" parent="HBoxContainer" unique_id=1226200247]
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("2_urdoc")
 text = "Param"
-
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
-[connection signal="pressed" from="Panel/HBoxContainer/Close" to="." method="_on_close_pressed"]
-[connection signal="pressed" from="Panel/HBoxContainer/Hide" to="." method="_on_hide_pressed"]
-[connection signal="pressed" from="Panel/HBoxContainer/Chrono" to="." method="_on_chrono_pressed"]
