@@ -3,19 +3,7 @@
 [ext_resource type="Theme" uid="uid://w8bybooxrfq2" path="res://assets/themes/style.tres" id="1_5wniu"]
 [ext_resource type="Script" uid="uid://0onsv2q1w55n" path="res://chrono.gd" id="2_6uio6"]
 
-[node name="Chrono" type="Window" unique_id=1485990453]
-transparent_bg = true
-oversampling_override = 1.0
-title = "Chrono"
-initial_position = 1
-size = Vector2i(125, 125)
-borderless = true
-always_on_top = true
-transparent = true
-content_scale_mode = 1
-content_scale_aspect = 1
-
-[node name="Panel" type="Panel" parent="." unique_id=2064758642]
+[node name="Panel" type="Panel" unique_id=267539163]
 offset_right = 500.0
 offset_bottom = 500.0
 scale = Vector2(0.25, 0.25)
@@ -23,7 +11,7 @@ mouse_filter = 1
 theme = ExtResource("1_5wniu")
 script = ExtResource("2_6uio6")
 
-[node name="Label" type="Label" parent="Panel" unique_id=50992996]
+[node name="Label" type="Label" parent="." unique_id=1315313001]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -38,7 +26,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 96
 
-[node name="Close" type="Button" parent="Panel" unique_id=2139753363]
+[node name="Close" type="Button" parent="." unique_id=1578304168]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
@@ -53,7 +41,7 @@ theme_override_font_sizes/font_size = 64
 text = "X"
 flat = true
 
-[node name="Start" type="Button" parent="Panel" unique_id=1529172392]
+[node name="Start" type="Button" parent="." unique_id=596845831]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -70,11 +58,11 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
 text = "Start"
 
-[node name="1s" type="Timer" parent="Panel" unique_id=1418920020]
+[node name="1s" type="Timer" parent="." unique_id=1789626337]
 wait_time = 0.1
 ignore_time_scale = true
 
-[node name="Buttons" type="HBoxContainer" parent="Panel" unique_id=9050332]
+[node name="Buttons" type="HBoxContainer" parent="." unique_id=774091816]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -88,22 +76,25 @@ offset_right = 188.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Pause" type="Button" parent="Panel/Buttons" unique_id=600859396]
+[node name="Pause" type="Button" parent="Buttons" unique_id=1210947455]
 layout_mode = 2
 theme = ExtResource("1_5wniu")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
 text = "Pause"
 
-[node name="Reset" type="Button" parent="Panel/Buttons" unique_id=1502782799]
+[node name="Reset" type="Button" parent="Buttons" unique_id=660208356]
 layout_mode = 2
 theme = ExtResource("1_5wniu")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
 text = "Reset"
 
-[connection signal="pressed" from="Panel/Close" to="Panel" method="_on_close_pressed"]
-[connection signal="pressed" from="Panel/Start" to="Panel" method="_on_start_pressed"]
-[connection signal="timeout" from="Panel/1s" to="Panel" method="_on_s_timeout"]
-[connection signal="pressed" from="Panel/Buttons/Pause" to="Panel" method="_on_pause_pressed"]
-[connection signal="pressed" from="Panel/Buttons/Reset" to="Panel" method="_on_reset_pressed"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="button_down" from="Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
+[connection signal="button_down" from="Start" to="." method="_on_start_pressed"]
+[connection signal="timeout" from="1s" to="." method="_on_s_timeout"]
+[connection signal="button_down" from="Buttons/Pause" to="." method="_on_pause_pressed"]
+[connection signal="button_down" from="Buttons/Reset" to="." method="_on_reset_pressed"]

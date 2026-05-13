@@ -1,4 +1,6 @@
-- [ ] rework the window system with one single window ! Using mouse passtrough only ***around the mouse !!!!!!!!!***
+- [x] rework the window system with one single window !
+
+- [ ] Use mouse passtrough only ***around the mouse !!!!!!!!!***
 
 - [ ] make a update checker with this : https://docs.godotengine.org/en/stable/tutorials/networking/http_request_class.html
 

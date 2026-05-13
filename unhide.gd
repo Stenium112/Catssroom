@@ -23,7 +23,6 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("right"):
 		scale = Vector2(0.25, 0.25)
 
-
-func _on_button_pressed() -> void:
+func _on_button_button_down() -> void:
 	Global.hidden(false)
 	queue_free()

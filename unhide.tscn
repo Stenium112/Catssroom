@@ -41,4 +41,5 @@ grow_vertical = 2
 theme = SubResource("Theme_bfyk7")
 text = "Unhide"
 
+[connection signal="button_down" from="Panel/Button" to="Panel" method="_on_button_button_down"]
 [connection signal="pressed" from="Panel/Button" to="Panel" method="_on_button_pressed"]
