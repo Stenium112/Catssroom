@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bwx3ryl00enrh"]
 
 [ext_resource type="Theme" uid="uid://w8bybooxrfq2" path="res://assets/themes/style.tres" id="1_5wniu"]
-[ext_resource type="Script" uid="uid://0onsv2q1w55n" path="res://chrono.gd" id="2_6uio6"]
+[ext_resource type="Script" uid="uid://0onsv2q1w55n" path="res://widget/chrono.gd" id="2_6uio6"]
 
 [node name="Panel" type="Panel" unique_id=267539163]
 offset_right = 500.0

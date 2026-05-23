@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cmfu6ncm56njs"]
 
 [ext_resource type="Theme" uid="uid://w8bybooxrfq2" path="res://assets/themes/style.tres" id="1_tu218"]
-[ext_resource type="Script" uid="uid://che76jbs3gafc" path="res://unhide.gd" id="2_74j4s"]
+[ext_resource type="Script" uid="uid://che76jbs3gafc" path="res://widget/unhide.gd" id="2_74j4s"]
 
 [sub_resource type="Theme" id="Theme_bfyk7"]
 

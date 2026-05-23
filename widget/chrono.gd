@@ -20,7 +20,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(mouse_in)
 	arrange_string(time)
 	
 	if scale < Vector2(0.25, 0.25): scale = Vector2(0.25, 0.25)
