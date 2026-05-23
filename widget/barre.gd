@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 func _on_chrono_pressed() -> void:
 	await get_tree().create_timer(0.1).timeout
 	if is_dragging != false: return
-	var chrono := preload("res://chrono.tscn")
+	var chrono := preload("res://widget/chrono.tscn")
 	add_sibling(chrono.instantiate())
 
 

@@ -7,11 +7,11 @@ This is inspired by [Classroom Screen](https://classroomscreen.com/)
 
 ### Screenshot
 
-![Chrono Screenshot 1 png](Chrono1.png "Chrono Screenshot 1")
+![Chrono Screenshot 1 png](github/Chrono1.png "Chrono Screenshot 1")
 
-![Chrono Screenshot 2 png](Chrono2.png "Chrono Screenshot 2")
+![Chrono Screenshot 2 png](github/Chrono2.png "Chrono Screenshot 2")
 
-![Bar Screenshot png](Bar.png "Bar Screenshot")
+![Bar Screenshot png](github/Bar.png "Bar Screenshot")
 
 ### Use/Run
 For use the app you have 2 methods :
@@ -42,11 +42,11 @@ Ce project est inspiré par [Classroom Screen](https://classroomscreen.com/)
 
 ### Capture d'écran
 
-![Chrono Capture d'écran 1 png](Chrono1.png "Chrono Capture d'écran 1")
+![Chrono Capture d'écran 1 png](github/Chrono1.png "Chrono Capture d'écran 1")
 
-![Chrono Capture d'écran 2 png](Chrono2.png "Chrono Capture d'écran 2")
+![Chrono Capture d'écran 2 png](github/Chrono2.png "Chrono Capture d'écran 2")
 
-![Bar Capture d'écran png](Bar.png "Barre Capture d'écran")
+![Bar Capture d'écran png](github/Bar.png "Barre Capture d'écran")
 
 ### Utiliser/Démarrer
 Pour utiliser l'application vous avez 2 méthodes :

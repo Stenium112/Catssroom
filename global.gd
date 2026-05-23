@@ -5,7 +5,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func hidden(hidden: bool = true):
-	var node := preload("res://unhide.tscn").instantiate()
+	var node := preload("res://widget/unhide.tscn").instantiate()
 	match hidden:
 		true:
 			for nodes in get_node("/root/Main").get_child_count():
