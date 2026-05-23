@@ -16,6 +16,7 @@ func _on_hide_pressed() -> void:
 	Global.hidden()
 
 func _process(delta: float) -> void:
+	
 	if scale < Vector2(0.25, 0.25): scale = Vector2(0.25, 0.25)
 	
 	if Input.is_action_pressed("down"):
