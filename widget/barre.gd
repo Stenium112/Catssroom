@@ -5,8 +5,11 @@ var is_dragging: bool
 var mouse_in: bool
 
 func _on_close_pressed() -> void:
+	print("1")
 	await get_tree().create_timer(0.1).timeout
 	if is_dragging != false: return
+	
+	print("2")
 	Global.quit(0, "Close button pressed")
 
 func _on_hide_pressed() -> void:
@@ -15,7 +18,7 @@ func _on_hide_pressed() -> void:
 	Global.hidden()
 
 func _process(delta: float) -> void:
-	
+	print(mouse_in)
 	if scale < Vector2(0.25, 0.25): scale = Vector2(0.25, 0.25)
 	
 	if Input.is_action_pressed("down"):
