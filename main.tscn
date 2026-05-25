@@ -7,7 +7,17 @@
 script = ExtResource("1_0xm2m")
 
 [node name="Barre" parent="." unique_id=222842408 instance=ExtResource("1_ig7tw")]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -425.0
+offset_top = -62.5
+offset_right = 425.0
+offset_bottom = 62.5
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=403493139]
-
-[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1399924739]
+color = Color(1, 0, 0, 0.37254903)
+polygon = PackedVector2Array(155, 292.75, 367.5, 292.75, 367.5, 261.5, 155, 261.5)

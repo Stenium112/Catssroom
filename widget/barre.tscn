@@ -4,8 +4,13 @@
 [ext_resource type="Theme" uid="uid://w8bybooxrfq2" path="res://assets/themes/style.tres" id="2_urdoc"]
 
 [node name="barre" type="Panel" unique_id=2063399486]
-offset_right = 850.0
-offset_bottom = 125.0
+anchors_preset = -1
+anchor_right = 0.18400002
+anchor_bottom = 0.048
+offset_right = 638.032
+offset_bottom = 93.895996
+grow_horizontal = 2
+grow_vertical = 0
 scale = Vector2(0.25, 0.25)
 mouse_filter = 1
 theme = ExtResource("2_urdoc")
