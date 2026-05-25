@@ -41,6 +41,10 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/per_pixel_transparency/allowed=true
 
+[dotnet]
+
+project/assembly_name="Application"
+
 [input]
 
 "left click"={
