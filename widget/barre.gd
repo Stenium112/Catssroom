@@ -4,6 +4,10 @@ var mouse_offset: Vector2
 var is_dragging: bool
 var mouse_in: bool
 
+var real_size: Vector2i
+
+@onready var window: Window = $".."
+
 func _on_close_pressed() -> void:
 	await get_tree().create_timer(0.1).timeout
 	if is_dragging != false: return
@@ -17,7 +21,11 @@ func _on_hide_pressed() -> void:
 
 func _process(delta: float) -> void:
 	
+	if window.size != Vector2i(size * scale): window.size = Vector2i(size * scale)
+	
 	if scale < Vector2(0.25, 0.25): scale = Vector2(0.25, 0.25)
+	if Input.is_action_pressed("left click"):
+		window.start_drag()
 	
 	if Input.is_action_pressed("down"):
 		if scale > Vector2(0.25, 0.25): scale -= Vector2(0.01, 0.01)
@@ -25,16 +33,7 @@ func _process(delta: float) -> void:
 		scale += Vector2(0.01, 0.01)
 	if Input.is_action_just_pressed("right"):
 		scale = Vector2(0.25, 0.25)
-	
-	
-	if Input.is_action_just_pressed("left click") and mouse_in:
-		mouse_offset = global_position - get_global_mouse_position()
-		is_dragging = true
-	
-	if is_dragging: global_position = get_global_mouse_position() + mouse_offset
-	
-	if Input.is_action_just_released("left click"):
-		is_dragging = false
+
 
 func _on_chrono_pressed() -> void:
 	await get_tree().create_timer(0.1).timeout
@@ -49,3 +48,19 @@ func _on_mouse_entered() -> void:
 
 func _on_mouse_exited() -> void:
 	mouse_in = false
+
+
+func _on_hide_button_down() -> void:
+	pass # Replace with function body.
+
+
+func _on_close_button_down() -> void:
+	pass # Replace with function body.
+
+
+func _on_chrono_button_down() -> void:
+	pass # Replace with function body.
+
+
+func _on_parameters_button_down() -> void:
+	pass # Replace with function body.
