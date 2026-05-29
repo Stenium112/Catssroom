@@ -21,7 +21,7 @@ func _on_hide_pressed() -> void:
 
 func _process(delta: float) -> void:
 	
-	if window.size != Vector2i(size * scale): window.size = Vector2i(size * scale)
+	if window.size != Vector2i(size): window.size = Vector2i(size)
 	
 	if scale < Vector2(0.25, 0.25): scale = Vector2(0.25, 0.25)
 	if Input.is_action_pressed("left click"):
