@@ -1,6 +1,7 @@
 extends Panel
 
 @onready var panel: Panel = $"."
+@onready var chrono: Window = $".."
 @onready var label: Label = $Label
 @onready var _1s: Timer = $"1s"
 @onready var start: Button = $Start
@@ -22,23 +23,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	arrange_string(time)
 	
-	if scale < Vector2(0.25, 0.25): scale = Vector2(0.25, 0.25)
 	
-	if Input.is_action_pressed("down"):
-		if scale > Vector2(0.25, 0.25): scale -= Vector2(0.01, 0.01)
-	if Input.is_action_pressed("up"):
-		scale += Vector2(0.01, 0.01)
-	if Input.is_action_just_pressed("right"):
-		scale = Vector2(0.25, 0.25)
-	
-	if Input.is_action_just_pressed("left click") and mouse_in:
-		mouse_offset = global_position - get_global_mouse_position()
-		is_dragging = true
-	
-	if is_dragging: global_position = get_global_mouse_position() + mouse_offset
-	
-	if Input.is_action_just_released("left click"):
-		is_dragging = false
+	if Input.is_action_pressed("left click") and mouse_in:
+		chrono.start_drag()
 
 
 func arrange_string(_time: float) -> void:
@@ -68,8 +55,6 @@ func _on_s_timeout() -> void:
 
 
 func _on_start_pressed() -> void:
-	await get_tree().create_timer(0.1).timeout
-	if is_dragging != false: return
 	
 	if _1s.is_stopped(): _1s.start()
 	elif _1s.paused: _1s.paused = false
@@ -78,15 +63,11 @@ func _on_start_pressed() -> void:
 
 
 func _on_pause_pressed() -> void:
-	await get_tree().create_timer(0.1).timeout
-	if is_dragging != false: return
 	
 	_1s.paused = !_1s.paused
 
 
 func _on_reset_pressed() -> void:
-	await get_tree().create_timer(0.1).timeout
-	if is_dragging != false: return
 	
 	if _1s.paused: _1s.paused = false
 	_1s.stop()
@@ -96,10 +77,8 @@ func _on_reset_pressed() -> void:
 
 
 func _on_close_pressed() -> void:
-	await get_tree().create_timer(0.1).timeout
-	if is_dragging != false: return
 	
-	queue_free()
+	chrono.queue_free()
 
 
 func _on_mouse_entered() -> void:

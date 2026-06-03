@@ -1,10 +1,8 @@
-- [x] rework the window system with one single window !
-
-- [ ] Use mouse passtrough only ***around the mouse !!!!!!!!!***
+- [x] reverse changes
 
 - [ ] make a update checker with this : https://docs.godotengine.org/en/stable/tutorials/networking/http_request_class.html
 
-- [ ] finish the bar and chrono
+- [x] finish the bar and chrono
 
 - [ ] publish the first release
 

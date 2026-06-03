@@ -3,15 +3,26 @@
 [ext_resource type="Theme" uid="uid://w8bybooxrfq2" path="res://assets/themes/style.tres" id="1_5wniu"]
 [ext_resource type="Script" uid="uid://0onsv2q1w55n" path="res://widget/chrono.gd" id="2_6uio6"]
 
-[node name="Panel" type="Panel" unique_id=267539163]
+[node name="Chrono" type="Window" unique_id=1068711943]
+transparent_bg = true
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+size = Vector2i(250, 250)
+unresizable = true
+borderless = true
+always_on_top = true
+transparent = true
+
+[node name="Panel" type="Panel" parent="." unique_id=710862953]
 offset_right = 500.0
 offset_bottom = 500.0
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.5, 0.5)
 mouse_filter = 1
+mouse_behavior_recursive = 2
 theme = ExtResource("1_5wniu")
 script = ExtResource("2_6uio6")
 
-[node name="Label" type="Label" parent="." unique_id=1315313001]
+[node name="Label" type="Label" parent="Panel" unique_id=1400568548]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -26,7 +37,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 96
 
-[node name="Close" type="Button" parent="." unique_id=1578304168]
+[node name="Close" type="Button" parent="Panel" unique_id=519394797]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
@@ -42,7 +53,7 @@ theme_override_font_sizes/font_size = 64
 text = "X"
 flat = true
 
-[node name="Start" type="Button" parent="." unique_id=596845831]
+[node name="Start" type="Button" parent="Panel" unique_id=1746656490]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -60,11 +71,11 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
 text = "Start"
 
-[node name="1s" type="Timer" parent="." unique_id=1789626337]
+[node name="1s" type="Timer" parent="Panel" unique_id=401785357]
 wait_time = 0.1
 ignore_time_scale = true
 
-[node name="Buttons" type="HBoxContainer" parent="." unique_id=774091816]
+[node name="Buttons" type="HBoxContainer" parent="Panel" unique_id=395948108]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -78,7 +89,7 @@ offset_right = 188.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Pause" type="Button" parent="Buttons" unique_id=1210947455]
+[node name="Pause" type="Button" parent="Panel/Buttons" unique_id=1196055363]
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("1_5wniu")
@@ -86,7 +97,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
 text = "Pause"
 
-[node name="Reset" type="Button" parent="Buttons" unique_id=660208356]
+[node name="Reset" type="Button" parent="Panel/Buttons" unique_id=1451629815]
 layout_mode = 2
 mouse_filter = 1
 theme = ExtResource("1_5wniu")
@@ -94,10 +105,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
 text = "Reset"
 
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
-[connection signal="button_down" from="Close" to="." method="_on_close_pressed"]
-[connection signal="button_down" from="Start" to="." method="_on_start_pressed"]
-[connection signal="timeout" from="1s" to="." method="_on_s_timeout"]
-[connection signal="button_down" from="Buttons/Pause" to="." method="_on_pause_pressed"]
-[connection signal="button_down" from="Buttons/Reset" to="." method="_on_reset_pressed"]
+[connection signal="mouse_entered" from="Panel" to="Panel" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Panel" to="Panel" method="_on_mouse_exited"]
+[connection signal="pressed" from="Panel/Close" to="Panel" method="_on_close_pressed"]
+[connection signal="pressed" from="Panel/Start" to="Panel" method="_on_start_pressed"]
+[connection signal="timeout" from="Panel/1s" to="Panel" method="_on_s_timeout"]
+[connection signal="pressed" from="Panel/Buttons/Pause" to="Panel" method="_on_pause_pressed"]
+[connection signal="pressed" from="Panel/Buttons/Reset" to="Panel" method="_on_reset_pressed"]
