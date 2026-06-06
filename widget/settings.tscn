@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://5qgxigt8q357"]
 
 [ext_resource type="Theme" uid="uid://w8bybooxrfq2" path="res://assets/themes/style.tres" id="1_yyx1x"]
-[ext_resource type="Script" uid="uid://7kys11xfa356" path="res://settings.gd" id="2_xsfql"]
+[ext_resource type="Script" uid="uid://7kys11xfa356" path="res://widget/settings.gd" id="2_xsfql"]
 [ext_resource type="Script" uid="uid://bmv1shu00w7ee" path="res://widget/settings/vbox.gd" id="3_xsfql"]
 
 [node name="Settings" type="Window" unique_id=959241853]

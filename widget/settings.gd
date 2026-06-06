@@ -13,11 +13,11 @@ func _ready() -> void:
 	panel.size.y = 100.0 + settings.size.y
 	window.size = panel.size * panel.scale.x
 	
-	version.text = "Version : " + "[url=https://github.com/godotengine/godot/releases/tag/" + Global.version + "]" + Global.version + "[/url]"
+	version.text = "Version : " + "[url=https://github.com/Stenium112/Catssroom/releases/tag/" + Global.version + "]" + Global.version + "[/url]"
 	
 	settings.re_adjust_child()
 	
-	http_request.request("https://api.github.com/repos/godotengine/godot/releases/latest")
+	http_request.request("https://api.github.com/repos/Stenium112/Catssroom/releases/latest")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -36,8 +36,10 @@ func _on_version_meta_clicked(meta: Variant) -> void:
 func _on_http_request_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
 	var json = JSON.parse_string(body.get_string_from_utf8())
 	var new_version: String = ""
-	if json["name"] != Global.version: 
-		new_version = " | [color=red]New version available : [/color]" + "[url=" + json["html_url"] + "]" + json["name"] + "[/url]"
-	version.text = str("Version : " + "[url=https://github.com/godotengine/godot/releases/tag/" + Global.version + "]" + Global.version + "[/url]" + new_version)
+	
+	if response_code == 0:
+		if json["name"] != Global.version:
+			new_version = " | [color=red]New version available : [/color]" + "[url=" + json["html_url"] + "]" + json["name"] + "[/url]"
+	version.text = str("Version : " + "[url=https://github.com/Stenium112/Catssroom/releases/tag/" + Global.version + "]" + Global.version + "[/url]" + new_version)
 	
 	settings.re_adjust_child()
