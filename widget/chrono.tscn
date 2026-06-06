@@ -6,7 +6,8 @@
 [node name="Chrono" type="Window" unique_id=1068711943]
 transparent_bg = true
 oversampling_override = 1.0
-position = Vector2i(0, 36)
+title = "Chrono"
+initial_position = 4
 size = Vector2i(250, 250)
 unresizable = true
 borderless = true

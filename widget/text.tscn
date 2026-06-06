@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ba7jnuyeah17y"]
+
+[ext_resource type="Script" uid="uid://b2dw282po2vgx" path="res://widget/text.gd" id="1_f8xv0"]
+[ext_resource type="Theme" uid="uid://w8bybooxrfq2" path="res://assets/themes/style.tres" id="1_tkfl6"]
+
+[node name="Text" type="Window" unique_id=999098726]
+transparent_bg = true
+oversampling_override = 1.0
+title = "Text"
+initial_position = 4
+unresizable = true
+borderless = true
+always_on_top = true
+transparent = true
+
+[node name="Panel" type="Panel" parent="." unique_id=790751693]
+offset_right = 633.0
+offset_bottom = 100.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("1_tkfl6")
+script = ExtResource("1_f8xv0")
+
+[node name="Close" type="Button" parent="Panel" unique_id=1437963892]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -49.0
+offset_bottom = 49.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("1_tkfl6")
+text = "X"
+flat = true
+
+[node name="LineEdit" type="LineEdit" parent="Panel" unique_id=1805595744]
+layout_mode = 0
+offset_right = 68.5
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+theme_override_colors/font_selected_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+theme_override_colors/font_placeholder_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+theme_override_colors/caret_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+theme_override_font_sizes/font_size = 64
+text = ":3"
+expand_to_text_length = true
+flat = true
+
+[connection signal="button_down" from="Panel/Close" to="Panel" method="_on_button_button_down"]

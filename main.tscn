@@ -7,8 +7,4 @@
 script = ExtResource("1_0xm2m")
 
 [node name="Barre" parent="." unique_id=222842408 instance=ExtResource("1_ig7tw")]
-scale = Vector2(0.25, 0.25)
 metadata/_edit_use_anchors_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1399924739]
-color = Color(1, 0, 0, 0.37254903)

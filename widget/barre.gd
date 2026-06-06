@@ -9,6 +9,7 @@ var mouse_in: bool
 var real_size: Vector2i
 
 @onready var window: Window = $".."
+@onready var container: HBoxContainer = $HBoxContainer
 
 func _on_close_button_down() -> void:
 	if is_dragging != false: return
@@ -19,10 +20,11 @@ func _on_hide_button_down() -> void:
 	if is_dragging != false: return
 	Global.hidden()
 
+func _ready() -> void:
+	size = container.size + Vector2(20, 20)
+	window.size = size * scale.x
+
 func _process(_delta: float) -> void:
-	
-	
-	
 	if scale < Vector2(0.25, 0.25): scale = Vector2(0.25, 0.25)
 	if Input.is_action_pressed("left click") and mouse_in:
 		is_dragging = true
@@ -53,4 +55,12 @@ func _on_mouse_exited() -> void:
 
 
 func _on_parameters_button_down() -> void:
-	pass # Replace with function body.
+	if is_dragging != false: return
+	var chrono := preload("res://widget/settings.tscn")
+	add_sibling(chrono.instantiate())
+
+
+func _on_text_button_down() -> void:
+	if is_dragging != false: return
+	var chrono := preload("res://widget/text.tscn")
+	add_sibling(chrono.instantiate())

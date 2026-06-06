@@ -1,20 +1,23 @@
 extends Node
 
+var version: String = "b1"
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
 func hidden(hidden: bool = true):
-	var node := preload("res://widget/unhide.tscn").instantiate()
+	var main: Node = get_parent().get_child(-1)
+	var unhide: Window = preload("res://widget/unhide.tscn").instantiate()
 	match hidden:
 		true:
-			for nodes in get_node("/root/Main").get_child_count():
-				get_node("/root/Main").get_child(nodes - 1).hide()
-				get_node("/root/Main").add_child(node)
+			for child in main.get_children(false):
+				child.hide()
+			add_sibling(unhide)
 		
 		false:
-			for nodes in get_node("/root/Main").get_child_count():
-				get_node("/root/Main").get_child(nodes - 1).show()
+			for child: Window in main.get_children(false):
+				child.show()
 
 func quit(code: int, text: String):
 	print(text)

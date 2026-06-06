@@ -77,7 +77,6 @@ func _on_reset_pressed() -> void:
 
 
 func _on_close_pressed() -> void:
-	
 	chrono.queue_free()
 
 
