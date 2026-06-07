@@ -16,7 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Catssroom"
 config/version="b1"
-run/main_scene="uid://rgfiid56kjvq"
+run/main_scene="uid://bf25jk7s8sxjm"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 0)
 boot_splash/stretch_mode=5
@@ -28,20 +28,19 @@ Global="*res://global.gd"
 
 [display]
 
-window/size/viewport_width=1
-window/size/viewport_height=1
-window/size/mode=1
+window/size/viewport_width=516
+window/size/viewport_height=59
 window/size/initial_position_type=4
 window/size/resizable=false
 window/size/borderless=true
+window/size/always_on_top=true
 window/size/transparent=true
-window/size/no_focus=true
-window/size/sharp_corners=true
 window/energy_saving/keep_screen_on=false
 window/subwindows/embed_subwindows=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/per_pixel_transparency/allowed=true
+window/main_scene="uid://rgfiid56kjvq"
 
 [dotnet]
 

@@ -19,27 +19,33 @@ func _ready() -> void:
 	
 	http_request.request("https://api.github.com/repos/Stenium112/Catssroom/releases/latest")
 
+func _input(event: InputEvent) -> void:
+	if Input.is_action_pressed("left click"):
+		window.start_drag()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("left click"): window.start_drag()
 	if settings.size.x != panel.size.x:
 		panel.size.x = settings.size.x + 40
 		window.size = panel.size * panel.scale.x
 	
 
-func _on_close_button_down() -> void:
-	window.queue_free()
-
 func _on_version_meta_clicked(meta: Variant) -> void:
-	OS.shell_open(meta)
+	if Input.is_action_just_pressed("left click"):
+		OS.shell_open(meta)
 
 func _on_http_request_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
-	var json = JSON.parse_string(body.get_string_from_utf8())
+	var json: Dictionary = JSON.parse_string(body.get_string_from_utf8())
 	var new_version: String = ""
 	
-	if response_code == 0:
+	if json.has("name"):
 		if json["name"] != Global.version:
 			new_version = " | [color=red]New version available : [/color]" + "[url=" + json["html_url"] + "]" + json["name"] + "[/url]"
 	version.text = str("Version : " + "[url=https://github.com/Stenium112/Catssroom/releases/tag/" + Global.version + "]" + Global.version + "[/url]" + new_version)
 	
 	settings.re_adjust_child()
+
+
+func _on_close_button_down() -> void:
+	if Input.is_action_just_pressed("left click"):
+		window.queue_free()

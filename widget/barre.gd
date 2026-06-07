@@ -1,49 +1,23 @@
 extends Panel
 
-# Button is being pressed after releasing drag :/ sadness
-
-var mouse_offset: Vector2
-var is_dragging: bool
-var mouse_in: bool
-
-var real_size: Vector2i
-
 @onready var window: Window = $".."
 @onready var container: HBoxContainer = $HBoxContainer
 
-func _on_close_button_down() -> void:
-	if is_dragging != false: return
-	
-	Global.quit(0, "Close button pressed")
-
-func _on_hide_button_down() -> void:
-	if is_dragging != false: return
-	Global.hidden()
+var mouse_in: bool
 
 func _ready() -> void:
 	size = container.size + Vector2(20, 20)
-	window.size = size * scale.x
+	get_window().size = size * scale.x
+	get_window().close_requested.connect(_on_close_requested)
+
 
 func _process(_delta: float) -> void:
 	if scale < Vector2(0.25, 0.25): scale = Vector2(0.25, 0.25)
+
+
+func _input(event: InputEvent) -> void:
 	if Input.is_action_pressed("left click") and mouse_in:
-		is_dragging = true
-		window.start_drag()
-	else: is_dragging = false
-	
-	#if Input.is_action_pressed("down"):
-		#if scale > Vector2(0.25, 0.25): scale -= Vector2(0.01, 0.01)
-	#if Input.is_action_pressed("up"):
-		#scale += Vector2(0.01, 0.01)
-	#if Input.is_action_just_pressed("right"):
-		#scale = Vector2(0.25, 0.25)
-		#Here to rework for ajust height
-
-
-func _on_chrono_button_down() -> void:
-	if is_dragging != false: return
-	var chrono := preload("res://widget/chrono.tscn")
-	add_sibling(chrono.instantiate())
+		get_window().start_drag()
 
 
 func _on_mouse_entered() -> void:
@@ -55,12 +29,28 @@ func _on_mouse_exited() -> void:
 
 
 func _on_parameters_button_down() -> void:
-	if is_dragging != false: return
-	var chrono := preload("res://widget/settings.tscn")
-	add_sibling(chrono.instantiate())
-
+	if Input.is_action_just_pressed("left click"):
+		var chrono := preload("res://widget/settings.tscn")
+		add_sibling(chrono.instantiate())
 
 func _on_text_button_down() -> void:
-	if is_dragging != false: return
-	var chrono := preload("res://widget/text.tscn")
-	add_sibling(chrono.instantiate())
+	if Input.is_action_just_pressed("left click"):
+		var chrono := preload("res://widget/text.tscn")
+		add_sibling(chrono.instantiate())
+
+func _on_chrono_button_down() -> void:
+	if Input.is_action_just_pressed("left click"):
+		var chrono := preload("res://widget/chrono.tscn")
+		add_sibling(chrono.instantiate())
+
+func _on_close_button_down() -> void:
+	if Input.is_action_just_pressed("left click"):
+		Global.quit(0, "Close button pressed")
+
+func _on_hide_button_down() -> void:
+	if Input.is_action_just_pressed("left click"):
+		Global.hidden()
+
+
+func _on_close_requested() -> void:
+	Global.quit(0, "Close requested")

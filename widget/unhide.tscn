@@ -14,6 +14,7 @@ size = Vector2i(66, 32)
 borderless = true
 always_on_top = true
 transparent = true
+popup_window = true
 content_scale_mode = 1
 content_scale_aspect = 1
 
@@ -38,6 +39,7 @@ offset_right = 116.5
 offset_bottom = 49.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_default_cursor_shape = 2
 theme = SubResource("Theme_bfyk7")
 text = "Unhide"
 

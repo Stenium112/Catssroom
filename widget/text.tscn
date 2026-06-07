@@ -12,6 +12,7 @@ unresizable = true
 borderless = true
 always_on_top = true
 transparent = true
+popup_window = true
 
 [node name="Panel" type="Panel" parent="." unique_id=790751693]
 offset_right = 633.0
@@ -32,6 +33,8 @@ offset_top = -49.0
 offset_bottom = 49.0
 grow_horizontal = 0
 grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme = ExtResource("1_tkfl6")
 text = "X"
 flat = true
@@ -40,12 +43,13 @@ flat = true
 layout_mode = 0
 offset_right = 252.0
 offset_bottom = 96.0
+mouse_filter = 1
 theme_override_colors/font_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
 theme_override_colors/font_selected_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
-theme_override_colors/font_placeholder_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+theme_override_colors/font_placeholder_color = Color(0.1254902, 0.1254902, 0.1254902, 0.5882353)
 theme_override_colors/caret_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
 theme_override_font_sizes/font_size = 64
-text = ":3"
+placeholder_text = "Text"
 expand_to_text_length = true
 flat = true
 
