@@ -51,7 +51,7 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 	
 	
 	if !json.has("status"):
-		if json["name"] != Global.version:
+		if json["tag_name"] != Global.version:
 			new_version = " | [color=red]New version available : [/color]" + "[color=blue][url=" + json["html_url"] + "]" + json["name"] + "[/url][/color]"
 	else:
 		print("Github release not available")
