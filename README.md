@@ -44,7 +44,7 @@ This application is licesend with the [Creative Commons BY (must have credit) NC
 
 ![Creative Commons png](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png "Creative Commons BY-NC-SA")
 
-So you can modify and publy this project, but you must give appropriate credits like "Originnaly created by Stenium and the community of Catssroom", you cannot commercialise this project and has to be on the same license.
+So you can modify and publy this project, but you must give appropriate credits like "Originally created by Stenium and the community of Catssroom", you cannot commercialise this project and has to be on the same license.
 
 # Français
 
