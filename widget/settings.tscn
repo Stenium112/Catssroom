@@ -14,7 +14,6 @@ unresizable = true
 borderless = true
 always_on_top = true
 transparent = true
-popup_window = true
 
 [node name="Settings" type="Panel" parent="." unique_id=1200577794]
 offset_right = 500.0
@@ -24,16 +23,40 @@ theme = ExtResource("1_yyx1x")
 script = ExtResource("2_xsfql")
 
 [node name="Settings" type="VBoxContainer" parent="Settings" unique_id=144634670]
-clip_contents = true
 layout_mode = 0
 offset_left = 20.0
 offset_top = 100.0
 offset_right = 996.0
 offset_bottom = 145.0
+theme_override_constants/separation = 40
 script = ExtResource("3_xsfql")
+
+[node name="Additional Info" type="RichTextLabel" parent="Settings/Settings" unique_id=1872754380]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("1_yyx1x")
+theme_override_colors/default_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+bbcode_enabled = true
+text = "[b]Controls[/b] : 
+- Drag on a window to move it
+- You can drag on button
+
+[b]If you have any issue[/b] :
+- Report the issue [color=blue][url=https://github.com/Stenium112/Catssroom/issues]here[/url][/color]
+- Or contact me at :  [u]stenium112@gmail.com[/u]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+drag_and_drop_selection_enabled = false
 
 [node name="Version" type="RichTextLabel" parent="Settings/Settings" unique_id=1661145582]
 layout_mode = 2
+mouse_filter = 1
 theme = ExtResource("1_yyx1x")
 theme_override_colors/default_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
 theme_override_font_sizes/normal_font_size = 32
@@ -45,6 +68,7 @@ bbcode_enabled = true
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
+drag_and_drop_selection_enabled = false
 
 [node name="HTTPRequest" type="HTTPRequest" parent="Settings/Settings/Version" unique_id=1875963820]
 timeout = 1.0
@@ -77,6 +101,8 @@ theme_override_colors/font_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
 theme_override_font_sizes/font_size = 64
 text = "Settings"
 
+[connection signal="mouse_entered" from="Settings" to="Settings" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Settings" to="Settings" method="_on_mouse_exited"]
 [connection signal="meta_clicked" from="Settings/Settings/Version" to="Settings" method="_on_version_meta_clicked"]
 [connection signal="request_completed" from="Settings/Settings/Version/HTTPRequest" to="Settings" method="_on_http_request_request_completed"]
 [connection signal="button_down" from="Settings/Close" to="Settings" method="_on_close_button_down"]

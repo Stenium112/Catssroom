@@ -1,23 +1,26 @@
 extends Node
 
 var version: String = "b1"
+var version_string: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	version_string = "[b]Version[/b] : [color=blue][url=https://github.com/Stenium112/Catssroom/releases/tag/" + Global.version + "]" + Global.version + "[/url][/color]"
 
 func hidden(hidden: bool = true):
-	var main: Node = get_parent().get_child(-1)
+	var main: Node = get_parent()
 	var unhide: Window = preload("res://widget/unhide.tscn").instantiate()
 	match hidden:
 		true:
 			for child in main.get_children(false):
-				child.hide()
+				if child.name != "Global":
+					child.hide()
 			add_sibling(unhide)
 		
 		false:
-			for child: Window in main.get_children(false):
-				child.show()
+			for child in main.get_children(false):
+				if child.name != "Global":
+					child.show()
 
 func quit(code: int, text: String):
 	print(text)

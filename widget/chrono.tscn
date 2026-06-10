@@ -6,14 +6,13 @@
 [node name="Chrono" type="Window" unique_id=1068711943]
 transparent_bg = true
 oversampling_override = 1.0
-title = "Chrono"
+title = "Chronometer"
 initial_position = 4
 size = Vector2i(250, 250)
 unresizable = true
 borderless = true
 always_on_top = true
 transparent = true
-popup_window = true
 
 [node name="Panel" type="Panel" parent="." unique_id=710862953]
 offset_right = 500.0

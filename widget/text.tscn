@@ -12,7 +12,6 @@ unresizable = true
 borderless = true
 always_on_top = true
 transparent = true
-popup_window = true
 
 [node name="Panel" type="Panel" parent="." unique_id=790751693]
 offset_right = 633.0

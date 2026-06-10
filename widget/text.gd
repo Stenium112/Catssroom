@@ -6,6 +6,9 @@ extends Panel
 
 var mouse_in: bool
 
+func _ready() -> void:
+	pass
+
 func _input(event: InputEvent) -> void:
 	if Input.is_action_pressed("left click") and mouse_in:
 		window.start_drag()
