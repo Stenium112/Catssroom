@@ -72,7 +72,7 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("1_5wniu")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
-text = "Start"
+text = "START_BTN"
 
 [node name="1s" type="Timer" parent="Panel" unique_id=401785357]
 wait_time = 0.1
@@ -99,7 +99,7 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("1_5wniu")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
-text = "Pause"
+text = "PAUSE_BTN"
 
 [node name="Reset" type="Button" parent="Panel/Buttons" unique_id=1451629815]
 layout_mode = 2
@@ -108,7 +108,7 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("1_5wniu")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
-text = "Reset"
+text = "RESET_BTN"
 
 [connection signal="mouse_entered" from="Panel" to="Panel" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Panel" to="Panel" method="_on_mouse_exited"]

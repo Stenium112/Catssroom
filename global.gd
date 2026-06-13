@@ -1,11 +1,10 @@
 extends Node
 
-var version: String = "b1"
-var version_string: String
+var version: String = "b1.1"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	version_string = "[b]Version[/b] : [color=blue][url=https://github.com/Stenium112/Catssroom/releases/tag/" + Global.version + "]" + Global.version + "[/url][/color]"
+	pass
 
 func hidden(hidden: bool = true):
 	var main: Node = get_parent()

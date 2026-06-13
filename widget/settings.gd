@@ -13,7 +13,7 @@ func _ready() -> void:
 	panel.size.y = 100.0 + settings.size.y
 	window.size = panel.size * panel.scale.x
 	
-	version.text = Global.version_string
+	version.text = tr("VERSION_TXT")
 	
 	settings.re_adjust_child()
 	
@@ -57,7 +57,7 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 		print("Github release not available")
 		return
 	
-	version.text = str(Global.version_string + new_version)
+	version.text = str(version.text + new_version)
 	
 	settings.re_adjust_child()
 

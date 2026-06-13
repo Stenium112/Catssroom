@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 func _on_button_button_down() -> void:
 	if Input.is_action_just_pressed("left click"):
 		Global.hidden(false)
-		queue_free()
+		window.queue_free()
 
 
 func _on_mouse_entered() -> void:

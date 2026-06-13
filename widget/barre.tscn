@@ -38,34 +38,34 @@ layout_mode = 2
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_urdoc")
-text = "Close"
+text = "CLOSE_BTN"
 
 [node name="Hide" type="Button" parent="HBoxContainer" unique_id=773021197]
 layout_mode = 2
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_urdoc")
-text = "Hide"
+text = "HIDE_BTN"
 
 [node name="Chrono" type="Button" parent="HBoxContainer" unique_id=242030143]
 layout_mode = 2
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_urdoc")
-text = "Chrono"
+text = "CHRONO_BTN"
 
 [node name="Text" type="Button" parent="HBoxContainer" unique_id=581866]
 layout_mode = 2
 mouse_filter = 1
 mouse_default_cursor_shape = 2
-text = "Text"
+text = "TEXT_BTN"
 
 [node name="Settings" type="Button" parent="HBoxContainer" unique_id=904999852]
 layout_mode = 2
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_urdoc")
-text = "Settings"
+text = "SETTINGS_BTN"
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

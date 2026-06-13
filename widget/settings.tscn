@@ -42,13 +42,7 @@ theme_override_font_sizes/bold_italics_font_size = 32
 theme_override_font_sizes/italics_font_size = 32
 theme_override_font_sizes/mono_font_size = 32
 bbcode_enabled = true
-text = "[b]Controls[/b] : 
-- Drag on a window to move it
-- You can drag on button
-
-[b]If you have any issue[/b] :
-- Report the issue [color=blue][url=https://github.com/Stenium112/Catssroom/issues]here[/url][/color]
-- Or contact me at :  [u]stenium112@gmail.com[/u]"
+text = "ADD_INFO_TXT"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
@@ -65,6 +59,7 @@ theme_override_font_sizes/bold_italics_font_size = 32
 theme_override_font_sizes/italics_font_size = 32
 theme_override_font_sizes/mono_font_size = 32
 bbcode_enabled = true
+text = "VERSION_TXT"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0

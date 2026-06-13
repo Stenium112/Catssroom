@@ -1,0 +1,24 @@
+keys,en,fr
+CLOSE_BTN,Close,Fermer
+HIDE_BTN,Hide,Cacher
+UNHIDE_BTN,Unhide,Afficher
+CHRONO_BTN,Chrono,Chrono
+TEXT_BTN,Text,Texte
+SETTINGS_BTN,Settings,Paramètres
+START_BTN,Start,Lancer
+PAUSE_BTN,Pause,Pause
+RESET_BTN,Reset,Reset
+ADD_INFO_TXT,"[b]Controls[/b] : 
+- Drag on a window to move it
+- You can drag any button in a window
+
+[b]If you have any issues or suggestions[/b] :
+- Report [color=blue][url=https://github.com/Stenium112/Catssroom/issues]here[/url][/color]
+- Or contact me at :  [u]stenium112@gmail.com[/u]","[b]Contrôles[/b] : 
+- Maintenir le clic gauche sur un widget pour le déplacer.
+- Vous pouvez le faire sur un bouton
+
+[b]Si vous avez un problème ou une suggestion[/b] :
+- Cliquez [color=blue][url=https://github.com/Stenium112/Catssroom/issues]ici[/url][/color].
+- Ou contactez-moi : [u]stenium112@gmail.com[/u]"
+VERSION_TXT,[b]Version[/b] : [color=blue][url=https://github.com/Stenium112/Catssroom/releases/tag/b1.1]b1.1[/url][/color],[b]Version[/b] : [color=blue][url=https://github.com/Stenium112/Catssroom/releases/tag/b1.1]b1.1[/url][/color]

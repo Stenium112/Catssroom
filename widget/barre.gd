@@ -13,6 +13,12 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if scale < Vector2(0.25, 0.25): scale = Vector2(0.25, 0.25)
+	if size != container.size + Vector2(20, 20):
+		print("barre")
+		size = container.size + Vector2(20, 20)
+	if get_window().size != Vector2i(size * scale.x):
+		print("window")
+		DisplayServer.window_set_size(Vector2i(size * scale.x))
 
 
 func _input(event: InputEvent) -> void:

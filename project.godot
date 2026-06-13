@@ -86,6 +86,11 @@ right_click={
 ]
 }
 
+[internationalization]
+
+locale/translation_remaps={}
+locale/translations=PackedStringArray("res://assets/translations.en.translation", "res://assets/translations.fr.translation")
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
