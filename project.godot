@@ -17,6 +17,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="Catssroom"
 config/version="b1"
 run/main_scene="uid://bf25jk7s8sxjm"
+config/use_custom_user_dir=true
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 0)
 boot_splash/show_image=false
@@ -27,6 +28,7 @@ config/icon="uid://nb3gkmdrhrap"
 [autoload]
 
 Global="*res://global.gd"
+Config="*uid://beyoxxjr1dhjm"
 
 [display]
 
