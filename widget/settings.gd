@@ -52,7 +52,7 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 	
 	if !json.has("status"):
 		if json["tag_name"] != Global.version:
-			new_version = " | [color=red]New version available : [/color]" + "[color=blue][url=" + json["html_url"] + "]" + json["name"] + "[/url][/color]"
+			new_version = tr("NEW_VERSION_TXT1") + json["html_url"] + tr("NEW_VERSION_TXT2") + json["name"] + tr("NEW_VERSION_TXT3")
 	else:
 		print("Github release not available")
 		return

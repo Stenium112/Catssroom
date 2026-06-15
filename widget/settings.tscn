@@ -68,6 +68,24 @@ drag_and_drop_selection_enabled = false
 [node name="HTTPRequest" type="HTTPRequest" parent="Settings/Settings/Version" unique_id=1875963820]
 timeout = 1.0
 
+[node name="Language" type="OptionButton" parent="Settings/Settings" unique_id=573838669]
+clip_contents = true
+layout_mode = 2
+theme = ExtResource("1_yyx1x")
+item_count = 2
+popup/item_0/text = "ENGLISH_TXT"
+popup/item_0/id = 0
+popup/item_1/text = "FRENCH_TXT"
+popup/item_1/id = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Settings/Settings/Language" unique_id=310146413]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_yyx1x")
+bbcode_enabled = true
+text = "LANG_BTN"
+
 [node name="Close" type="Button" parent="Settings" unique_id=1224580052]
 layout_mode = 1
 anchors_preset = -1

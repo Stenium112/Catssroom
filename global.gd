@@ -6,19 +6,19 @@ var version: String = "b1.1"
 func _ready() -> void:
 	pass
 
-func hidden(hidden: bool = true):
+func hidden(hide: bool = true) -> void:
 	var main: Node = get_parent()
 	var unhide: Window = preload("res://widget/unhide.tscn").instantiate()
-	match hidden:
+	match hide:
 		true:
 			for child in main.get_children(false):
-				if child.name != "Global":
+				if child.name != "Global" and child.name != "Config":
 					child.hide()
 			add_sibling(unhide)
 		
 		false:
 			for child in main.get_children(false):
-				if child.name != "Global":
+				if child.name != "Global" and child.name != "Config":
 					child.show()
 
 func quit(code: int, text: String):
