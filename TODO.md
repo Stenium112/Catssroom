@@ -1,5 +1,5 @@
 
-- [ ] make good logo for button and app
+- [ ] make good logo for button
 
 - [ ] make traduction for English/French for all things
 

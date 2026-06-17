@@ -5,6 +5,7 @@ extends Panel
 @onready var settings: VBoxContainer = $Settings
 @onready var version: RichTextLabel = $Settings/Version
 @onready var http_request: HTTPRequest = $Settings/Version/HTTPRequest
+@onready var language: OptionButton = $Settings/Language/Language
 
 var mouse_in: bool
 
@@ -73,3 +74,25 @@ func _on_mouse_entered() -> void:
 
 func _on_mouse_exited() -> void:
 	mouse_in = false
+
+func _on_apply_button_down() -> void:
+	if Input.is_action_just_pressed("left click"):
+		
+		if language.get_selected_id() == 0:
+			Config.config.set_value("Miscellaneous", "Language", "en")
+			print("en")
+			
+		if language.get_selected_id() == 1:
+			Config.config.set_value("Miscellaneous", "Language", "fr")
+			print("fr")
+		
+		
+		Config.apply_config()
+		var error: Error = Config.config.save(Config.path_to_config)
+		if error != OK: print("Failed to save config from settings with code : " + str(error))
+		Config.load_config()
+
+
+func _on_language_button_down() -> void:
+	if !Input.is_action_just_pressed("left click"):
+		return

@@ -25,6 +25,8 @@ VERSION_TXT,[b]Version[/b] : [color=blue][url=https://github.com/Stenium112/Cats
 NEW_VERSION_TXT1, | [color=red]New version available : [/color][color=blue][url=, | [color=red]Nouvelle version disponible : [/color][color=blue][url=
 NEW_VERSION_TXT2,],]
 NEW_VERSION_TXT3,[/url][/color],[/url][/color]
-LANG_BTN,[b]Language[/b],[b]Langue[/b]
+LANG_BTN,[b]Language[/b] : ,[b]Langue[/b] : 
 ENGLISH_TXT,English,Anglais
 FRENCH_TXT,French,Français
+SETTINGS_TXT,Settings,Paramètres
+APLY_A_SAVE,Apply and save,Appliquer et sauvegarder

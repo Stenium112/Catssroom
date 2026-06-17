@@ -31,6 +31,50 @@ offset_bottom = 145.0
 theme_override_constants/separation = 40
 script = ExtResource("3_xsfql")
 
+[node name="Language" type="Control" parent="Settings/Settings" unique_id=1765204989]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+
+[node name="Language" type="OptionButton" parent="Settings/Settings/Language" unique_id=573838669]
+clip_contents = true
+layout_mode = 0
+offset_left = 170.0
+offset_right = 401.0
+offset_bottom = 55.0
+mouse_filter = 1
+theme = ExtResource("1_yyx1x")
+theme_override_font_sizes/font_size = 32
+selected = 0
+item_count = 2
+popup/item_0/text = "ENGLISH_TXT"
+popup/item_0/id = 0
+popup/item_1/text = "FRENCH_TXT"
+popup/item_1/id = 1
+
+[node name="Language Text" type="RichTextLabel" parent="Settings/Settings/Language" unique_id=310146413]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 165.0
+offset_bottom = 50.0
+theme = ExtResource("1_yyx1x")
+theme_override_colors/default_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+bbcode_enabled = true
+text = "LANG_BTN"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Apply" type="Button" parent="Settings/Settings" unique_id=1872398461]
+layout_mode = 2
+theme = ExtResource("1_yyx1x")
+theme_override_font_sizes/font_size = 32
+text = "APLY_A_SAVE"
+
 [node name="Additional Info" type="RichTextLabel" parent="Settings/Settings" unique_id=1872754380]
 layout_mode = 2
 mouse_filter = 1
@@ -68,25 +112,21 @@ drag_and_drop_selection_enabled = false
 [node name="HTTPRequest" type="HTTPRequest" parent="Settings/Settings/Version" unique_id=1875963820]
 timeout = 1.0
 
-[node name="Language" type="OptionButton" parent="Settings/Settings" unique_id=573838669]
-clip_contents = true
-layout_mode = 2
+[node name="SettingsLabel" type="Label" parent="Settings" unique_id=1342462339]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -124.0
+offset_right = 124.0
+offset_bottom = 88.0
+grow_horizontal = 2
 theme = ExtResource("1_yyx1x")
-item_count = 2
-popup/item_0/text = "ENGLISH_TXT"
-popup/item_0/id = 0
-popup/item_1/text = "FRENCH_TXT"
-popup/item_1/id = 1
+theme_override_colors/font_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+theme_override_font_sizes/font_size = 64
+text = "SETTINGS_TXT"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Settings/Settings/Language" unique_id=310146413]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-theme = ExtResource("1_yyx1x")
-bbcode_enabled = true
-text = "LANG_BTN"
-
-[node name="Close" type="Button" parent="Settings" unique_id=1224580052]
+[node name="Close" type="Button" parent="Settings" unique_id=1753492781]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.95
@@ -100,22 +140,10 @@ theme = ExtResource("1_yyx1x")
 text = "X"
 flat = true
 
-[node name="SettingsLabel" type="Label" parent="Settings" unique_id=1342462339]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -124.0
-offset_right = 124.0
-offset_bottom = 88.0
-grow_horizontal = 2
-theme = ExtResource("1_yyx1x")
-theme_override_colors/font_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
-theme_override_font_sizes/font_size = 64
-text = "Settings"
-
 [connection signal="mouse_entered" from="Settings" to="Settings" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Settings" to="Settings" method="_on_mouse_exited"]
+[connection signal="button_down" from="Settings/Settings/Language/Language" to="Settings" method="_on_language_button_down"]
+[connection signal="button_down" from="Settings/Settings/Apply" to="Settings" method="_on_apply_button_down"]
 [connection signal="meta_clicked" from="Settings/Settings/Version" to="Settings" method="_on_version_meta_clicked"]
 [connection signal="request_completed" from="Settings/Settings/Version/HTTPRequest" to="Settings" method="_on_http_request_request_completed"]
 [connection signal="button_down" from="Settings/Close" to="Settings" method="_on_close_button_down"]
