@@ -40,6 +40,7 @@ func default_config() -> Error:
 
 func apply_config() -> void:
 	TranslationServer.set_locale(config.get_value("Miscellaneous", "Miscellaneous", "en"))
+	print(TranslationServer.)
 	Engine.max_fps = config.get_value("Miscellaneous", "MaxFPS", 60)
 	# Add here for applying some things of th config
 

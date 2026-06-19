@@ -90,9 +90,10 @@ func _on_apply_button_down() -> void:
 		Config.apply_config()
 		var error: Error = Config.config.save(Config.path_to_config)
 		if error != OK: print("Failed to save config from settings with code : " + str(error))
-		Config.load_config()
-
+		
+		error = Config.load_config()
+		if error != OK: print("Failed to load config from settings with code : " + str(error))
 
 func _on_language_button_down() -> void:
 	if !Input.is_action_just_pressed("left click"):
-		return
+		pass
