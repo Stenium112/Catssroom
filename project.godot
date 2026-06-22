@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Catssroom"
-config/version="b1"
+config/version="b1.1"
 run/main_scene="uid://bf25jk7s8sxjm"
 config/use_custom_user_dir=true
 config/features=PackedStringArray("4.6", "Forward Plus")
