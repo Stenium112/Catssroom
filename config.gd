@@ -9,6 +9,8 @@ func _ready() -> void:
 	var error: Error = load_config()
 	if error != OK:
 		print("Failed to load config with error : " + str(error))
+	
+	apply_config()
 
 
 func load_config() -> Error:
@@ -39,9 +41,9 @@ func default_config() -> Error:
 	return error
 
 func apply_config() -> void:
-	TranslationServer.set_locale(config.get_value("Miscellaneous", "Miscellaneous", "en"))
-	print(TranslationServer.)
-	Engine.max_fps = config.get_value("Miscellaneous", "MaxFPS", 60)
+	TranslationServer.set_locale(config.get_value("Miscellaneous", "Language"))
+	
+	Engine.max_fps = config.get_value("Miscellaneous", "MaxFPS")
 	# Add here for applying some things of th config
 
 

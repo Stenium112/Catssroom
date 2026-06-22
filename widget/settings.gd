@@ -6,6 +6,7 @@ extends Panel
 @onready var version: RichTextLabel = $Settings/Version
 @onready var http_request: HTTPRequest = $Settings/Version/HTTPRequest
 @onready var language: OptionButton = $Settings/Language/Language
+@onready var FPS_select: SpinBox = $"Settings/FPS/FPS Select"
 
 var mouse_in: bool
 
@@ -13,6 +14,14 @@ var mouse_in: bool
 func _ready() -> void:
 	panel.size.y = 100.0 + settings.size.y
 	window.size = panel.size * panel.scale.x
+	
+	match Config.config.get_value("Miscellaneous", "Language"):
+		"fr": language.selected = 1
+		
+		_: language.selected = 0 # _ mean anything
+	
+	FPS_select.value = Config.config.get_value("Miscellaneous", "MaxFPS")
+	
 	
 	version.text = tr("VERSION_TXT")
 	
@@ -36,13 +45,15 @@ func _on_version_meta_clicked(meta: Variant) -> void:
 		OS.shell_open(meta)
 
 func _on_http_request_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
-	var json = JSON.parse_string(body.get_string_from_utf8())
-	var new_version: String = ""
-
+	
 	if result != 0:
 		print("No internet for checking a new update ! / Github not available !")
 		return
-
+	
+	var json = JSON.parse_string(body.get_string_from_utf8())
+	var new_version: String = ""
+	
+	
 	if json == null:
 		print("Json parse error")
 		return
@@ -80,12 +91,11 @@ func _on_apply_button_down() -> void:
 		
 		if language.get_selected_id() == 0:
 			Config.config.set_value("Miscellaneous", "Language", "en")
-			print("en")
 			
 		if language.get_selected_id() == 1:
 			Config.config.set_value("Miscellaneous", "Language", "fr")
-			print("fr")
 		
+		Config.config.set_value("Miscellaneous", "MaxFPS", FPS_select.value)
 		
 		Config.apply_config()
 		var error: Error = Config.config.save(Config.path_to_config)
@@ -93,6 +103,8 @@ func _on_apply_button_down() -> void:
 		
 		error = Config.load_config()
 		if error != OK: print("Failed to load config from settings with code : " + str(error))
+		
+		settings.re_adjust_child()
 
 func _on_language_button_down() -> void:
 	if !Input.is_action_just_pressed("left click"):

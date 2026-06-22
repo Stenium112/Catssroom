@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://7kys11xfa356" path="res://widget/settings.gd" id="2_xsfql"]
 [ext_resource type="Script" uid="uid://bmv1shu00w7ee" path="res://widget/settings/vbox.gd" id="3_xsfql"]
 
+[sub_resource type="Theme" id="Theme_xsfql"]
+
 [node name="Settings" type="Window" unique_id=959241853]
 transparent_bg = true
 oversampling_override = 1.0
@@ -36,14 +38,14 @@ custom_minimum_size = Vector2(0, 55)
 layout_mode = 2
 
 [node name="Language" type="OptionButton" parent="Settings/Settings/Language" unique_id=573838669]
-clip_contents = true
 layout_mode = 0
 offset_left = 170.0
-offset_right = 401.0
+offset_right = 334.0
 offset_bottom = 55.0
 mouse_filter = 1
 theme = ExtResource("1_yyx1x")
 theme_override_font_sizes/font_size = 32
+clip_text = true
 selected = 0
 item_count = 2
 popup/item_0/text = "ENGLISH_TXT"
@@ -68,6 +70,40 @@ text = "LANG_BTN"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
+
+[node name="FPS" type="Control" parent="Settings/Settings" unique_id=1028972653]
+custom_minimum_size = Vector2(0, 53)
+layout_mode = 2
+
+[node name="FPS Text" type="RichTextLabel" parent="Settings/Settings/FPS" unique_id=1346308936]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 94.0
+offset_bottom = 49.0
+theme = SubResource("Theme_xsfql")
+theme_override_colors/default_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+bbcode_enabled = true
+text = "FPS_TXT"
+scroll_active = false
+autowrap_mode = 0
+
+[node name="FPS Select" type="SpinBox" parent="Settings/Settings/FPS" unique_id=2005597761]
+clip_contents = true
+layout_mode = 0
+offset_left = 94.0
+offset_right = 240.0
+offset_bottom = 53.0
+theme = ExtResource("1_yyx1x")
+min_value = 16.0
+max_value = 500.0
+value = 60.0
+rounded = true
+allow_greater = true
 
 [node name="Apply" type="Button" parent="Settings/Settings" unique_id=1872398461]
 layout_mode = 2
