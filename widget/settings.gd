@@ -69,7 +69,7 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 		print("Github release not available")
 		return
 	
-	version.text = str(version.text + new_version)
+	version.text = str(tr("VERSION_TXT") + new_version)
 	
 	settings.re_adjust_child()
 
@@ -103,6 +103,8 @@ func _on_apply_button_down() -> void:
 		
 		error = Config.load_config()
 		if error != OK: print("Failed to load config from settings with code : " + str(error))
+		
+		http_request.request("https://api.github.com/repos/Stenium112/Catssroom/releases/latest")
 		
 		settings.re_adjust_child()
 
