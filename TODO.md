@@ -1,7 +1,7 @@
 
-- [ ] make good logo for button
+- [ ] make a popup menu when right click to change properties
 
-- [ ] make traduction for English/French for all things
+- [ ] make good logo for button
 
 - [ ] fix style, color, and settings
 

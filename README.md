@@ -7,22 +7,26 @@ This is inspired by [Classroom Screen](https://classroomscreen.com/)
 
 ### Screenshots
 
-![All widgets](github/all-widget.png "Screenshot of all widgets")
+![All widgets](github/all-widget-en.png "Screenshot of all widgets")
 
 Catssroom in action !
 
 #### Widgets
 
 ![Chrono](github/chrono.png "Screenshot of the chrono")
+
 The chrono in action
 
-![Settings](github/settings.png "Screenshot of the settings panel")
+![Settings](github/settings-en.png "Screenshot of the settings panel")
+
 The settings, not very settings.
 
 ![Text](github/text-en.png "Screenshot of the text widget")
+
 The text widget !
 
-![Unhide](github/settings.png "Screenshot of the hide function")
+![Unhide](github/unhide-en.png "Screenshot of the hide function")
+
 This is what you get after pressing hide
 
 ### Use/Run
@@ -42,7 +46,7 @@ You can [participate on the project](https://github.com/Stenium112/Catssroom/pul
 ### License
 This application is licesend with the [Creative Commons BY (must have credit) NC (cannot be comercialise) SA (has to be on the same license)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-![Creative Commons png](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png "Creative Commons BY-NC-SA")
+![Creative Commons png](github//by-nc-sa.png "Creative Commons BY-NC-SA")
 
 So you can modify and publy this project, but you must give appropriate credits like "Originally created by Stenium and the community of Catssroom", you cannot commercialise this project and has to be on the same license.
 
@@ -55,22 +59,26 @@ Ce project est inspiré par [Classroom Screen](https://classroomscreen.com/)
 
 ### Captures d'écrans
 
-![Tous les widgets](github/all-widget.png "Capture d'écran de tous les widgets")
+![Tous les widgets](github/all-widget-fr.png "Capture d'écran de tous les widgets")
 
 Catssroom en action !
 
 #### Widgets
 
 ![Chrono](github/chrono.png "Capture d'écran du chrono")
+
 Le chrono en action
 
-![Paramètres](github/settings.png "Capture d'écran du panel de paramètres")
+![Paramètres](github/settings-fr.png "Capture d'écran du panel de paramètres")
+
 Les paramètres, pas vrament des paramètres.
 
 ![Texte](github/text-fr.png "Capture d'écran du widget texte")
+
 Le widget de texte
 
-![Décacher](github/settings.png "Capture d'écran de la fonction cacher")
+![Décacher](github/unhide-fr.png "Capture d'écran de la fonction cacher")
+
 C'est ce que vous obtenez après avoir appuyé sur hide
 
 ### Utiliser/Démarrer
@@ -91,6 +99,6 @@ Vous pouvez [participer au projet](https://github.com/Stenium112/Catssroom/pulls
 ### licence
 Ce projet est sous la licence [Creative Commons BY (doit avoir des crédits) NC (ne peut être commercialiser) SA (dois avoir la même licence)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-![Creative Commons png](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png "Creative Commons BY-NC-SA")
+![Creative Commons png](github/by-nc-sa.png "Creative Commons BY-NC-SA")
 
 Donc vous pouvez modifier ce projet et le publier autre pars, mais vous devez mettre des crédits approprier comme "Créé originalement par Stenium et la communauté de Catssroom", vous ne pouvez pas commercialisez ce projet et dois avoir la même licence que le projet original.
