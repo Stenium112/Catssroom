@@ -38,19 +38,15 @@ theme = ExtResource("1_tkfl6")
 text = "X"
 flat = true
 
-[node name="LineEdit" type="LineEdit" parent="Panel" unique_id=1805595744]
+[node name="TextEdit" type="TextEdit" parent="Panel" unique_id=1906023363]
 layout_mode = 0
-offset_right = 252.0
-offset_bottom = 96.0
+offset_right = 202.0
+offset_bottom = 100.0
 mouse_filter = 1
-theme_override_colors/font_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
-theme_override_colors/font_selected_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
-theme_override_colors/font_placeholder_color = Color(0.1254902, 0.1254902, 0.1254902, 0.5882353)
-theme_override_colors/caret_color = Color(0.1254902, 0.1254902, 0.1254902, 1)
-theme_override_font_sizes/font_size = 64
-placeholder_text = "Text"
-expand_to_text_length = true
-flat = true
+theme = ExtResource("1_tkfl6")
+placeholder_text = "TEXT_BTN"
+scroll_fit_content_height = true
+scroll_fit_content_width = true
 
 [connection signal="mouse_entered" from="Panel" to="Panel" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Panel" to="Panel" method="_on_mouse_exited"]

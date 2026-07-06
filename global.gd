@@ -1,6 +1,6 @@
 extends Node
 
-var version: String = "b1.1"
+var version: String = "b1.2"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

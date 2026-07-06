@@ -1,21 +1,21 @@
 extends Panel
 
 @onready var window: Window = $".."
-@onready var line_edit: LineEdit = $LineEdit
+@onready var text_edit: TextEdit = $TextEdit
 @onready var close: Button = $Close
 
 var mouse_in: bool
 
 func _ready() -> void:
-	pass
+	text_edit.autowrap_mode = TextServer.AUTOWRAP_OFF
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_pressed("left click") and mouse_in:
 		window.start_drag()
 
 func _process(delta: float) -> void:
-	if size != line_edit.size + Vector2(close.size.x + 20, 0):
-		size = line_edit.size + Vector2(close.size.x + 20, 0)
+	if size != text_edit.size + Vector2(close.size.x + 20, 0):
+		size = text_edit.size + Vector2(close.size.x + 20, 0)
 		window.size = size * scale.x
 
 
