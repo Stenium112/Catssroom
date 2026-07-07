@@ -76,6 +76,7 @@ autowrap_mode = 0
 [node name="FPS" type="Control" parent="Settings/Settings" unique_id=1028972653]
 custom_minimum_size = Vector2(0, 53)
 layout_mode = 2
+mouse_filter = 1
 mouse_force_pass_scroll_events = false
 
 [node name="FPS Text" type="RichTextLabel" parent="Settings/Settings/FPS" unique_id=1346308936]
@@ -97,11 +98,11 @@ scroll_active = false
 autowrap_mode = 0
 
 [node name="FPS Select" type="SpinBox" parent="Settings/Settings/FPS" unique_id=2005597761]
-clip_contents = true
 layout_mode = 0
 offset_left = 94.0
 offset_right = 240.0
 offset_bottom = 53.0
+mouse_filter = 1
 theme = ExtResource("1_yyx1x")
 min_value = 1.0
 max_value = 500.0
