@@ -23,7 +23,7 @@ boot_splash/bg_color=Color(0, 0, 0, 0)
 boot_splash/stretch_mode=5
 boot_splash/use_filter=false
 boot_splash/image="uid://nb3gkmdrhrap"
-config/icon="uid://nb3gkmdrhrap"
+config/icon="uid://mrd8pe6awd3k"
 
 [autoload]
 
